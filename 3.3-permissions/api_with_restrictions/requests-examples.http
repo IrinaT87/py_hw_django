@@ -21,7 +21,7 @@ Authorization: Token 7a798087fde316fde9fbd3730889cfddd1cda750
 ###
 
 # попытка поменять объявление
-PATCH {{baseUrl}}/adv/2/
+PATCH {{baseUrl}}/adv/7/
 Content-Type: application/json
 Authorization: Token 7a798087fde316fde9fbd3730889cfddd1cda750
 
