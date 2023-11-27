@@ -13,9 +13,7 @@ class AdvertisementViewSet(ModelViewSet):
     """ViewSet для объявлений."""
     queryset=Advertisement.objects.all()
     serializer_class=AdvertisementSerializer
-    permission_classes = [IsOwnerOrReadOnly]
     filterset_class = AdvertisementFilter
-    filter_fields=['id', 'creator', 'created_at', 'status']
     throttle_classes = [UserRateThrottle, AnonRateThrottle]
 
     # TODO: настройте ViewSet, укажите атрибуты для кверисета,

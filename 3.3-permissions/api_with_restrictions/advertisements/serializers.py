@@ -45,6 +45,6 @@ class AdvertisementSerializer(serializers.ModelSerializer):
         
         creator = self.context["request"].user
         advertisements = Advertisement.objects.all()
-        if advertisements.filter(status='OPEN', creator=creator).count() >= 10:
+        if advertisements.filter(status='OPEN', creator=creator).count() >= 10 and advertisements.status!='CLOSE':
             raise ValidationError('Внимание! Размещено максимально допустимое количество открытых обьявлений.')
         return data
